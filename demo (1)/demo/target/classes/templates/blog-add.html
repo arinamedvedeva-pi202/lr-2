@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Blog</title>
+</head>
+<body>
+<header>
+<a href="/">Главная</a>
+<a href="/blog">Блог</a>
+</header>
+<div>
+<h1>Добавление статьи</h1>
+<form action="/blog/add" method="post">
+<input type="text" name="title"
+placeholder="Название статьи">
+<input type="text" name="anons"
+placeholder="Анонс">
+<textarea name="text"
+placeholder="Текст"></textarea>
+<button type="submit">Добавить
+статью</button>
+</form>
+</div>
+</body>
+</html>

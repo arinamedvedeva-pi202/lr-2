@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Blog</title>
+</head>
+<body>
+<header>
+<a href="/">Главная</a>
+<a href="/blog">Блог</a>
+</header>
+<div>
+<h1>Редактирование статьи</h1>
+<div th:each="el: ${post}">
+<form method="post">
+<input th:value="${el.title}" type="text"
+name="title" placeholder="Название статьи">
+<input th:value="${el.anons}" type="text"
+name="anons" placeholder="Анонс">
+<textarea th:text="${el.text}"
+name="text" placeholder="Текст" />
+<button type="submit">Обновить</button>
+</form>
+</div>
+</div>
+</body>
+</html>

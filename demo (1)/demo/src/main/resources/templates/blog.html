@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.thymeleaf.org" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Blog</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">Главная</a>
+      <a href="/blog">Блог</a>
+    </header>
+    <div>
+      <h1>Блог</h1>
+      <div th:each="el: ${posts}">
+        <h2 th:text="${el.title}" />
+        <p th:text="${el.anons}" />
+        <a
+          th:href="'/blog/' +
+${el.id}"
+          >Детальнее</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
